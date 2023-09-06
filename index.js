@@ -1,29 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const heading = React.createElement("h1", { id: "heading" }, "Hello World");
-const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
 
 
-{/* <div class="parent">
-    <div class="child">
-        <h1>I'm h1 tag</h1>
-        <h2>I'm h2 tag</h2>
-    </div>
-    <div class="child2">
-        <h1>I'm h1 tag</h1>
-        <h2>I'm h2 tag</h2>
-    </div>
-</div> */}
-
-const parent=React.createElement("div",{id:"parent"},[
-    React.createElement("div",{id:"child1"},[
-        React.createElement("h1",{},"I'm h1 tag"),
-        React.createElement("h2",{},"I'm an h2 tag"),
-    ]),
-    React.createElement("div",{id:"child2"},[
-        React.createElement("h1",{},"I'm h1 tag"),
-        React.createElement("h2",{},"I'm an h2 tag"),
-    ]),
-])
-root.render(parent);
+// Two ways to create react Element
+// way 1
+// const heading=<h1>Hello brother</h1>
+// way 2
+// const heading=React.createElement("h1",
+// {id:"heading"},
+// "namaste react")
+// console.log(heading)
+//JSX(transpiled before it reaches the JS) -PARCEL-Babel
+//JSX-React.createElement=>ReactElement-JS Object=>HTML(render)
+//It is react.render(heading) which convert js object created by create Element to html elemnt that browser understands
+//ReactDOM.createRoot(document.getElement by id("root")) it create the root of react tree
