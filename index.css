@@ -44,3 +44,19 @@
     padding: 5px;
     cursor: pointer;
 }
+.shimmer-cards{
+    margin:200px;
+    width: 200px;
+    height: 400px;
+    background-color: grey;
+}
+.shimmer-container{
+    display: flex;
+}
+.login{
+    padding: 0px 20px;
+    cursor: pointer;
+}
+.filter{
+    display: flex;
+}
