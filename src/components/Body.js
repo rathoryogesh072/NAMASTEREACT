@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard"
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
+
 
 const Body=()=>{
     const [listOfRestaurants,setListOfRestaurants]=useState([]);
@@ -48,9 +50,12 @@ const Body=()=>{
                     )} onMouseOver={()=>(console.log("mouse overed"))}>Top Rated Restaurant</button>
             </div>
             <div className="res-container">
-                {filteredRestaurants.map((dhaba)=>{
-                    return <RestaurantCard key={dhaba.info.id} resData={dhaba}/>
-                })}
+                {filteredRestaurants.map((dhaba)=>(
+                    <Link key={dhaba.info.id} 
+                    to={"/restaurants/"+dhaba.info.id}>
+                        <RestaurantCard resData={dhaba}/>
+                    </Link>
+                ))}
             </div>
         </div>
     )
