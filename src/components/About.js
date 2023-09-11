@@ -1,8 +1,12 @@
 import React from 'react'
+import User from './User'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <h1>About</h1>
+      <User/>
+    </div>
   )
 }
 
