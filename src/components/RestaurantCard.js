@@ -12,4 +12,22 @@ const RestaurantCard=(prop)=>{
         </div>
     )
 }
+
+//Higher Order Components
+//it takes componenet and return componenet
+//example-adding some unique thing on some of the cards
+//input-RestaurantCard=>>RestaurantCardPromoted
+export const withPromotedLabel=(RestaurantCard)=>{
+    return (props)=>{
+        return(
+            <div>
+                <label className="absolute bg-black text-white m-2 p-2 rounded-lg">
+                    Good Rating
+                </label>
+                <RestaurantCard {...props}/>
+            </div>
+        )
+    }
+}
 export default RestaurantCard;
+
