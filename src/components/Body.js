@@ -23,13 +23,13 @@ const Body=()=>{
         setFilteredRestaurants(
             json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
           );
-        console.log(json);
+        // console.log(json);
       };
     useEffect(()=>{
         fetchData();
     },[]);
 
-    console.log("rendered");
+    // console.log("rendered");
     return listOfRestaurants.length===0 ?(<Shimmer/>):(
         <div className="body">
             <div className="filter">
